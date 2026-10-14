@@ -1,27 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brain Challenge</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz Brain Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="game">
-        <h1> Brain Challenge</h1>
-        <p>Test je hersenen met een puzzel!</p>
+    <div class="decoration decoration-one" aria-hidden="true">🦊</div>
+    <div class="decoration decoration-two" aria-hidden="true">🦉</div>
+    <div class="decoration decoration-three" aria-hidden="true">🐰</div>
+    <div class="decoration decoration-four" aria-hidden="true">🐢</div>
+    <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
+    <div class="sparkle sparkle-two" aria-hidden="true">★</div>
 
-        <h2 id="question">Hoeveel is 5 + 3?</h2>
+    <main class="app">
+        <header class="site-header">
+            <div class="brain-logo" aria-hidden="true">🧠</div>
+            <p class="eyebrow">DENK • SPEEL • WIN</p>
+            <h1>Quiz <span>Brain Challenge</span></h1>
+        </header>
 
-        <input type="number" id="answer" placeholder="Jouw antwoord">
+        <section id="homeScreen" class="screen active" aria-labelledby="welcomeTitle">
+            <div class="home-art" aria-hidden="true">
+                <span class="art-animal fox">🦊</span>
+                <span class="art-animal owl">🦉</span>
+                <span class="art-animal bunny">🐰</span>
+                <span class="art-star star-a">⭐</span>
+                <span class="art-star star-b">✨</span>
+            </div>
+            <p class="pill">🧩 8 leuke rekenvragen</p>
+            <h2 id="welcomeTitle">Klaar om je brein te trainen?</h2>
+            <p class="intro">Los de sommen op, kies het juiste antwoord en verzamel maximaal 1000 punten!</p>
+            <div class="rules">
+                <div><span>➕</span> Optellen</div>
+                <div><span>➖</span> Aftrekken</div>
+                <div><span>✖️</span> Vermenigvuldigen</div>
+                <div><span>➗</span> Delen</div>
+            </div>
+            <button id="startButton" class="primary-button">▶ Start Game</button>
+            <p class="small-note">Je krijgt 125 punten voor elk goed antwoord.</p>
+        </section>
 
-        <button id="checkButton">Controleer antwoord</button>
+        <section id="gameScreen" class="screen" aria-labelledby="questionText" hidden>
+            <div class="game-topline">
+                <span id="questionCounter" class="pill">Vraag 1 van 8</span>
+                <span class="score-pill">⭐ Score: <strong id="scoreDisplay">0</strong></span>
+            </div>
+            <div class="progress-track" aria-label="Voortgang">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <div class="question-card">
+                <div class="question-icon" aria-hidden="true">💡</div>
+                <p class="question-label">Wat is het antwoord?</p>
+                <h2 id="questionText">12 + 8 = ?</h2>
+            </div>
+            <div id="answerButtons" class="answers" aria-label="Antwoordmogelijkheden"></div>
+            <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+            <button id="nextButton" class="primary-button" hidden>Volgende vraag →</button>
+            <p class="small-note">Neem je tijd en kies één antwoord.</p>
+        </section>
 
-        <p id="feedback">Vul je antwoord in.</p>
-        <p id="score">Score: 0</p>
+        <section id="resultScreen" class="screen" aria-labelledby="resultTitle" hidden>
+            <div class="result-art" aria-hidden="true">
+                <span class="result-animal result-fox">🦊</span>
+                <span class="trophy">🏆</span>
+                <span class="result-animal result-owl">🦉</span>
+                <span class="confetti">🎉</span>
+            </div>
+            <p class="pill">✨ Quiz voltooid!</p>
+            <h2 id="resultTitle">Goed gedaan!</h2>
+            <p id="resultMessage" class="intro">Je hebt alle vragen beantwoord.</p>
+            <div class="final-score-card">
+                <p>Jouw score</p>
+                <div class="final-score"><span id="finalScore">0</span><small> / 1000</small></div>
+                <div id="resultStars" class="result-stars" aria-label="Sterren">☆☆☆☆☆</div>
+                <p id="correctCount" class="correct-count">0 van de 8 antwoorden goed</p>
+            </div>
+            <button id="restartButton" class="primary-button">↻ Opnieuw spelen</button>
+            <button id="menuButton" class="secondary-button">⌂ Terug naar menu</button>
+        </section>
+
+        <footer>
+            <span>Credit:  Roni, Eli, Rayane</span>
+            <span>•</span>
+            <span></span>
+        </footer>
     </main>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
