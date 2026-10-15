@@ -1,15 +1,14 @@
 const questions = [
     { text: "12 + 8 = ?", answer: 20, options: [18, 20, 15, 17] },
-    { text: "20 - 7 = ?", answer: 13, options: [12, 14, 13, 11] },
+    { text: "89 - 17 = ?", answer: 72, options: [73, 63, 79, 72] },
     { text: "6 × 4 = ?", answer: 24, options: [20, 24, 18, 16] },
     { text: "36 ÷ 6 = ?", answer: 6, options: [4, 5, 6, 7] },
-    { text: "15 + 9 = ?", answer: 24, options: [22, 24, 26, 20] },
-    { text: "18 - 5 = ?", answer: 13, options: [10, 12, 13, 14] },
-    { text: "7 × 3 = ?", answer: 21, options: [18, 20, 21, 24] },
-    { text: "40 ÷ 8 = ?", answer: 5, options: [5, 6, 7, 8] }
+    { text: "65 + 19 = ?", answer: 84, options: [81, 75, 90, 84] },
+    { text: "75 - 35 = ?", answer: 40, options: [30, 40, 35, 45] },
+    { text: "7 × 23 = ?", answer: 161, options: [161, 153, 93, 175] },
+    { text: "112 ÷ 8 = ?", answer: 14, options: [16, 12, 14, 23] }
 ];
 
-// Alle gegevens van de game staan samen in één object.
 const game = {
     score: 0,
     currentQuestion: 0,
@@ -67,7 +66,6 @@ function loadQuestion() {
     nextButton.hidden = true;
     answerButtons.replaceChildren();
 
-    // Hussel de antwoorden, zodat het goede antwoord niet steeds op dezelfde plek staat.
     const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
 
     shuffledOptions.forEach((option) => {
