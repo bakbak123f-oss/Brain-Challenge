@@ -90,7 +90,7 @@ p { line-height: 1.55; }
 }
 .art-animal { font-size: clamp(2.8rem, 8vw, 4.5rem); filter: drop-shadow(0 5px 2px #9bb9cc66); }
 .art-animal.fox { transform: rotate(-9deg); }
-.art-animal.owl { transform: translateY(-13px); }
+.art-trophy { transform: translateY(-13px); }
 .art-animal.bunny { transform: rotate(8deg); }
 .art-star { position: absolute; font-size: 1.3rem; }
 .star-a { left: 13%; top: 15px; }
@@ -191,7 +191,7 @@ button:focus-visible { outline: 4px solid #ffc94f; outline-offset: 4px; }
 .result-animal { font-size: clamp(2.8rem, 8vw, 4.5rem); }
 .trophy { display: inline-grid; place-items: center; width: 105px; height: 105px; border-radius: 50%; background: #fff0b6; font-size: 3.8rem; box-shadow: 0 7px 0 #f4d982; }
 .result-fox { transform: rotate(-10deg); }
-.result-owl { transform: rotate(9deg); }
+.result-trophy { transform: rotate(9deg); }
 .confetti { position: absolute; top: 8px; right: 18%; font-size: 1.7rem; }
 .final-score-card {
     max-width: 380px;
