@@ -16,16 +16,14 @@ body {
     border-radius: 20px;
 }
 
-/* Titel */
 h1 {
-    color: #8b69df;
+    color: #2081b9;
 }
 
 h2 {
     font-size: 28px;
 }
 
-/* Afbeeldingen en emoji */
 .brain-logo {
     font-size: 40px;
 }
@@ -42,7 +40,6 @@ h2 {
     font-size: 45px;
 }
 
-/* Knoppen */
 button {
     padding: 12px 20px;
     margin: 5px;
@@ -66,7 +63,6 @@ button:hover {
     opacity: 0.8;
 }
 
-/* Regels */
 .rules {
     display: flex;
     justify-content: center;
@@ -80,7 +76,6 @@ button:hover {
     border-radius: 10px;
 }
 
-/* Score */
 .score-pill {
     background-color: #fff0c2;
     padding: 8px;
@@ -100,7 +95,6 @@ button:hover {
     border-radius: 10px;
 }
 
-/* Vragen en antwoorden */
 .question-card {
     padding: 20px;
     background-color: #e2f4ff;
@@ -130,7 +124,6 @@ button:hover {
     cursor: default;
 }
 
-/* Feedback */
 .feedback.good {
     color: green;
 }
@@ -139,7 +132,6 @@ button:hover {
     color: red;
 }
 
-/* Eindscore */
 .final-score-card {
     padding: 20px;
     margin: 20px auto;
@@ -157,7 +149,6 @@ button:hover {
     font-size: 25px;
 }
 
-/* Voortgang en footer */
 .pill {
     padding: 8px;
     background-color: #e6f2ff;
@@ -169,7 +160,6 @@ footer {
     color: gray;
 }
 
-/* Versiering */
 .decoration,
 .sparkle {
     position: fixed;
