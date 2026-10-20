@@ -17,27 +17,19 @@ body {
 }
 
 h1 {
-    color: #2081b9;
+    color: #f8513b;
 }
 
 h2 {
     font-size: 28px;
 }
 
-.brain-logo {
-    font-size: 40px;
+.rar-logo {
+    font-size: 55px;
 }
 
-.home-art,
-.result-art {
-    padding: 20px;
-    background-color: #fff1c8;
-    border-radius: 20px;
-}
-
-.art-animal,
-.result-animal {
-    font-size: 45px;
+.prize {
+    font-size: 50px;
 }
 
 button {
@@ -74,42 +66,11 @@ button:hover {
     padding: 12px;
     background-color: #f0eaff;
     border-radius: 10px;
-}
-
-.score-pill {
-    background-color: #fff0c2;
-    padding: 8px;
-    border-radius: 10px;
-}
-
-.progress-track {
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 10px;
-}
-
-.progress-bar {
-    height: 10px;
-    width: 0;
-    background-color: #39bd91;
-    border-radius: 10px;
-}
-
-.question-card {
-    padding: 20px;
-    background-color: #e2f4ff;
-    border-radius: 20px;
-}
-
-.answers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
+}   
 
 .answer-button {
     background-color: #dff1ff;
-    color: #24365b;
+    color: #4b6599;
 }
 
 .answer-button.correct {
@@ -132,13 +93,6 @@ button:hover {
     color: red;
 }
 
-.final-score-card {
-    padding: 20px;
-    margin: 20px auto;
-    background-color: #fff8dd;
-    border-radius: 20px;
-}
-
 .final-score {
     font-size: 40px;
     color: #8b69df;
@@ -149,46 +103,7 @@ button:hover {
     font-size: 25px;
 }
 
-.pill {
-    padding: 8px;
-    background-color: #e6f2ff;
-    border-radius: 10px;
-}
-
 footer {
     margin-top: 20px;
     color: gray;
 }
-
-.decoration,
-.sparkle {
-    position: fixed;
-    pointer-events: none;
-}
-
-.decoration-one {
-    left: 10px;
-    bottom: 10px;
-}
-
-.decoration-two {
-    right: 10px;
-    top: 10px;
-}
-
-.decoration-three {
-    left: 10px;
-    top: 10px;
-}
-
-.decoration-four {
-    right: 10px;
-    bottom: 10px;
-}
-
-.sparkle-one {
-    left: 15%;
-    top: 50%;
-}
-
-.sparkle
