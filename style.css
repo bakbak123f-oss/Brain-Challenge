@@ -1,126 +1,93 @@
-body { 
-  margin: 0; 
-  padding: 0; 
-  font-family: Arial, sans-serif; 
-  text-align: center; 
-  color: #24365b; 
-  
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; 
- 
- 
-  
- 
-  background-image: url( images/background.jpg ); 
-  background-repeat: no-repeat; 
-  background-position: center center; 
-  background-size: cover; 
-  background-attachment: fixed; 
-} 
+body {
+    background-image: url("foto/achtergrond.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-.app { 
-  width: 100%;
-  max-width: 650px; 
-  margin: 20px; 
-  padding: 25px; 
-  background-color: white; 
-  border-radius: 20px; 
-  box-sizing: border-box; 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-} 
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
 
-h1 { 
-  color: #f8513b; 
-} 
+.pagina {
+    background-color: white;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 25px;
+}
 
-h2 { 
-  font-size: 28px; 
-} 
+.logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
 
-.rar-logo { 
-  font-size: 55px; 
-} 
+h1 {
+    color: #239618;
+}
 
-.prize { 
-  font-size: 50px; 
-} 
+h2 {
+    color: #333333;
+}
 
-button { 
-  padding: 12px 20px; 
-  margin: 5px; 
-  border: none; 
-  border-radius: 10px; 
-  font-size: 16px; 
-  cursor: pointer; 
-} 
+.emoji {
+    font-size: 35px;
+    margin: 15px;
+}
 
-.primary-button { 
-  background-color: #39bd91; 
-  color: white; 
-} 
+input {
+    padding: 12px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    font-size: 16px;
+}
 
-.secondary-button { 
-  background-color: #e9edff; 
-  color: #24365b; 
-} 
+button {
+    background-color: #20a447;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-button:hover { 
-  opacity: 0.8; 
-} 
+button:hover {
+    background-color: #a73434;
+}
 
-.rules { 
-  display: flex; 
-  justify-content: center; 
-  gap: 10px; 
-  flex-wrap: wrap; 
-} 
+#antwoorden {
+    margin: 20px 0;
+}
 
-.rules div { 
-  padding: 12px; 
-  background-color: #f0eaff; 
-  border-radius: 10px; 
-} 
+.antwoord {
+    display: block;
+    background-color: #f1f8f2;
+    color: #222222;
+    border: 1px solid #b5d9bd;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto;
+}
 
-.answer-button { 
-  background-color: #dff1ff; 
-  color: #4b6599; 
-} 
+.antwoord.gekozen {
+    background-color: #c8e6c9;
+    border: 2px solid #16823b;
+}
 
-.answer-button.correct { 
-  background-color: #c9f7df; 
-} 
+#resultaat {
+    font-weight: bold;
+    margin: 20px;
+}
 
-.answer-button.incorrect { 
-  background-color: #ffe0e5; 
-} 
-
-.answer-button:disabled { 
-  cursor: default; 
-} 
-
-.feedback.good { 
-  color: green; 
-} 
-
-.feedback.bad { 
-  color: red; 
-} 
-
-.final-score { 
-  font-size: 40px; 
-  color: #8b69df; 
-} 
-
-.result-stars { 
-  color: orange; 
-  font-size: 25px; 
-} 
-
-footer { 
-  margin-top: 20px; 
-  color: gray; 
+footer {
+    margin-top: 35px;
+    color: #666666;
+    font-size: 14px;
 }

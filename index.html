@@ -3,71 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Brain Challenge</title>
+    <title>Brain Challenge Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="app">
-        <header class="site-header">
-            <div class="rar-logo" aria-hidden="true">🎮</div>
-            <p class="eyebrow"> RAR STUDIO </p>
-            <h1> Brain Challenge Quiz</h1>
-        </header>
 
-        <section id="homeScreen" class="screen active" aria-labelledby="welcomeTitle">
-            <div class="home-art" aria-hidden="true">
-                <span class="prize">🏆</span>
-            </div>
-            <p class="pill"> Klik op Start</p>
-            <p class="intro"></p>
-            <div class="rules">
+    <!-- Startpagina -->
+    <div id="startPagina" class="pagina">
+        <img src="foto/logo.png" class="logo" alt="RER Studio logo">
 
-            </div>
-            <button id="startButton" class="primary-button"> Start </button>
-            <p class="small-note"></p>
-        </section>
+        <h1>RER STUDIO</h1>
+        <h2>Brain Challenge Quiz</h2>
+        <div class="emoji">🏆 🧠</div>
 
-        <section id="gameScreen" class="screen" aria-labelledby="questionText" hidden>
-            <div class="game-topline">
-                <span id="questionCounter" class="pill">Vraag 1 van 8</span>
-                <span class="score-pill">⭐ Score: <strong id="scoreDisplay">0</strong></span>
-            </div>
-            <div class="progress-track" aria-label="Voortgang">
-                <div id="progressBar" class="progress-bar"></div>
-            </div>
-            <div class="question-card">
-                <div class="question-icon" aria-hidden="true">💡</div>
-                <p class="question-label">Wat is het antwoord?</p>
-                <h2 id="questionText">12 + 8 = ?</h2>
-            </div>
-            <div id="answerButtons" class="answers" aria-label="Antwoordmogelijkheden"></div>
-            <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
-            <button id="nextButton" class="primary-button" hidden>Volgende vraag →</button>
-            <p class="small-note">Neem je tijd en kies een antwoord.</p>
-        </section>
+        <p>Vul eerst je naam in!</p>
+        <input type="text" id="spelerNaam" placeholder="Jouw naam" required>
 
-        <section id="resultScreen" class="screen" aria-labelledby="resultTitle" hidden>
-            <div class="result-art" aria-hidden="true">
-                <span class="trophy">🏆</span>
-                <span class="confetti">🎉</span>
-            </div>
-            <p class="pill"> Quiz voltooid!</p>
-            <h2 id="resultTitle">Goed gedaan!</h2>
-            <p id="resultMessage" class="intro">Je hebt alle vragen beantwoord.</p>
-            <div class="final-score-card">
-                <p>Jouw score</p>
-                <div class="final-score"><span id="finalScore">0</span><small> / 1000</small></div>
-                <div id="resultStars" class="result-stars" aria-label="Sterren">☆☆☆☆☆</div>
-                <p id="correctCount" class="correct-count">0 van de 8 antwoorden goed</p>
-            </div>
-            <button id="restartButton" class="primary-button">↻ Opnieuw spelen</button>
-            <button id="menuButton" class="secondary-button">⌂ Terug naar menu</button>
-        </section>
+        <p>Klik op start om de quiz te beginnen.</p>
+        <button onclick="startQuiz()">Start</button>
 
-        <footer>
-            <span>Credits:  Roni, Eli, Rayane</span>
-        </footer>
-    </main>
+        <footer>Credits: Roni, Eli, Rayane</footer>
+    </div>
+
+
+    <!-- Quizpagina -->
+    <div id="quizPagina" class="pagina" style="display: none;">
+        <img src="foto/logo.png" class="logo" alt="RER Studio logo">
+        <h1>RER STUDIO</h1>
+
+        <p id="vraagNummer"></p>
+        <h2>Wat is het antwoord?</h2>
+
+        <h3 id="rekenVraag"></h3>
+
+        <div id="antwoorden"></div>
+
+        <button id="beantwoordKnop" onclick="controleerAntwoord()">
+            Beantwoord
+        </button>
+
+        <p id="resultaat"></p>
+
+        <button id="volgendeKnop" onclick="volgendeVraag()"
+                style="display: none;">
+            Volgende
+        </button>
+
+        <footer>Credits: Roni, Eli, Rayane</footer>
+    </div>
+
+
+    <!-- Eindpagina -->
+    <div id="eindPagina" class="pagina" style="display: none;">
+        <img src="foto/logo.png" class="logo" alt="RER Studio logo">
+        <h1>RER STUDIO</h1>
+
+        <h2>Quiz voltooid! 🎉</h2>
+        <p>Goed gedaan! Blijf oefenen en maak je brein sterker!</p>
+
+        <h2 id="eindScore">Score: 0 / 100</h2>
+        <p id="goedeAntwoorden"></p>
+
+        <button onclick="opnieuwSpelen()">Opnieuw spelen</button>
+        <button onclick="terugNaarMenu()">Terug naar menu</button>
+
+        <footer>Credits: Roni, Eli, Rayane</footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
